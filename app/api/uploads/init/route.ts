@@ -12,7 +12,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const { filename, filetype } = await request.json();
+    const { filename } = await request.json();
 
     if (!TRANSLOADIT_KEY || !TRANSLOADIT_SECRET) {
       throw new Error('Transloadit credentials not configured');
