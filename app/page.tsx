@@ -1,11 +1,10 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function Home() {
   const router = useRouter();
-  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     // Redirect directly to dashboard in demo mode
@@ -18,7 +17,6 @@ export default function Home() {
       // In demo mode, show dashboard directly
       router.push('/dashboard');
     }
-    setIsReady(true);
   }, [router]);
 
   return (

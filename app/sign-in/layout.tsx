@@ -1,4 +1,4 @@
-import { auth, redirectToSignIn } from '@clerk/nextjs';
+import { auth } from '@clerk/nextjs';
 import { redirect } from 'next/navigation';
 
 export default function SignInLayout({
