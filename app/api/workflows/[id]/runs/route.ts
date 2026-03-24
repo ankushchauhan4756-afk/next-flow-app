@@ -5,6 +5,9 @@ import type { Node, Edge } from 'reactflow';
 
 const DEMO_USER_ID = 'demo-user-123';
 
+// Mark this route as dynamic to prevent build-time data collection
+export const dynamic = 'force-dynamic';
+
 export async function POST(
   request: Request,
   { params }: { params: { id: string } }
