@@ -13,6 +13,7 @@ export async function POST(request: Request) {
     }
 
     // Extract only filename, remove unused variables
+    // Build: 2026-03-24 Clear cache
     const { filename } = await request.json();
 
     if (!TRANSLOADIT_KEY || !TRANSLOADIT_SECRET) {
