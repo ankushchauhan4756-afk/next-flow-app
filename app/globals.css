@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-krea-bg text-white;
+}
+
+/* React Flow Styling */
+.react-flow {
+  @apply bg-krea-darker;
+}
+
+.react-flow__background {
+  @apply bg-krea-darker;
+}
+
+.react-flow__minimap {
+  @apply bg-krea-dark border-l border-krea-accent/20;
+}
+
+.react-flow__node {
+  @apply rounded-lg border border-krea-accent/30 bg-krea-dark shadow-lg;
+}
+
+.react-flow__node.selected {
+  @apply border-krea-accent shadow-lg shadow-krea-accent/50;
+}
+
+.react-flow__node.running {
+  @apply animate-pulse-glow border-krea-accent;
+}
+
+.react-flow__edge {
+  stroke: rgb(129, 140, 248);
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected {
+  stroke: rgb(99, 102, 241);
+  stroke-width: 3;
+}
+
+/* Pulsating glow effect for running nodes */
+.node-running {
+  @apply animate-pulse-glow;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-krea-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-krea-accent/50 rounded hover:bg-krea-accent;
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply btn bg-krea-accent hover:bg-krea-accent-light text-white;
+}
+
+.btn-secondary {
+  @apply btn bg-krea-dark hover:bg-krea-darker border border-krea-accent/30;
+}
+
+.btn-ghost {
+  @apply btn hover:bg-krea-dark/50;
+}
+
+/* Input styles */
+.input {
+  @apply w-full px-3 py-2 bg-krea-dark border border-krea-accent/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-krea-accent transition-colors;
+}
+
+.input:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Card styles */
+.card {
+  @apply bg-krea-dark border border-krea-accent/20 rounded-lg p-4;
+}

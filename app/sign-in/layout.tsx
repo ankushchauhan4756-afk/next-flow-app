@@ -1,0 +1,20 @@
+import { auth, redirectToSignIn } from '@clerk/nextjs';
+import { redirect } from 'next/navigation';
+
+export default function SignInLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const { userId } = auth();
+
+  if (userId) {
+    redirect('/dashboard');
+  }
+
+  return (
+    <div className="min-h-screen bg-krea-bg flex items-center justify-center">
+      {children}
+    </div>
+  );
+}

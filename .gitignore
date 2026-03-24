@@ -1,0 +1,10 @@
+.env.local
+.env
+node_modules/
+dist/
+build/
+.next/
+*.log
+.DS_Store
+.vscode/settings.json
+.vercel
