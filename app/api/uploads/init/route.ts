@@ -12,8 +12,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    // Extract only filename, remove unused variables
-    // Build: 2026-03-24 Clear cache
     const { filename } = await request.json();
 
     if (!TRANSLOADIT_KEY || !TRANSLOADIT_SECRET) {
@@ -68,7 +66,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error('Error initializing upload:', error);
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'Failed to initialize upload' },
+      { error: 'Failed to initialize upload' },
       { status: 500 }
     );
   }
